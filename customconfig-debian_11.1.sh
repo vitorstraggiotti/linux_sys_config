@@ -8,7 +8,7 @@ apt upgrade -y
 echo "WaylandEnable=false" >> /etc/gdm3/daemon.conf
 
 # add current user to sudoers
-echo "$USER   ALL=(ALL:ALL) ALL" >> etc/sudoers
+echo "vitor   ALL=(ALL:ALL) ALL" >> etc/sudoers
 
 #########################################################
 

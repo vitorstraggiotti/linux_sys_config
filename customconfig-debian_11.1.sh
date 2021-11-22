@@ -5,10 +5,10 @@ apt update
 apt upgrade -y
 
 # changing video server from wayland to X11
-echo "WaylandEnable=false" >> /etc/gdm3/daemon.conf
+sed -i '/WaylandEnable=false/s/^#//g' /etc/gdm3/daemon.conf
 
 # add current user to sudoers
-echo "vitor   ALL=(ALL:ALL) ALL" >> etc/sudoers
+echo "vitor   ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
 #########################################################
 

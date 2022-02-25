@@ -21,6 +21,9 @@ apt install simplescreenrecorder -y
 # install compilation toolchain
 apt install build-essential -y
 
+# install GNOME Desktop Enviroment Develoipment Tools
+apt install gnome-devel -y
+
 # install .deb package installer
 apt install gdebi -y
 

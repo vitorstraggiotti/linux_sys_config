@@ -1,5 +1,7 @@
 #!/bin/bash
 
+USERNAME = vitor
+
 # updating system
 apt update
 apt upgrade -y
@@ -8,7 +10,7 @@ apt upgrade -y
 sed -i '/WaylandEnable=false/s/^#//g' /etc/gdm3/daemon.conf
 
 # add current user to sudoers
-echo "vitor   ALL=(ALL:ALL) ALL" >> /etc/sudoers
+echo "$USERNAME   ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
 #########################################################
 
@@ -41,5 +43,6 @@ apt install virtualbox-6.1 -y
 
 ########################################################
 
-# reboot system to aply changes
-reboot
+# Customise bash prompt
+mv /home/$USERNAME/.bashrc /home/$USERNAME/.bashrc.bak
+cp ./custom_files_debian/.bashrc /home/$USERNAME/

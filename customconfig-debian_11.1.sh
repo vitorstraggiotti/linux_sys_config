@@ -32,6 +32,12 @@ apt install gdebi -y
 # install git
 apt install git -y
 
+# install tree
+apt install tree -y
+
+# install micro
+apt install micro -y
+
 # install virtual Box
 echo " " >> /etc/apt/sources.list
 echo "# Virtualbox repo" >> /etc/apt/sources.list
